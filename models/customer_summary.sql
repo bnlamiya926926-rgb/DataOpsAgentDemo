@@ -1,0 +1,14 @@
+{{ config(
+    materialized='table',
+    schema='DEMO'
+) }}
+
+
+SELECT
+    CUSTOMER_ID,
+    CUSTOMER_NAME,
+    REGION,
+    ANNUAL_REVENUE,
+    LOAD_TIMESTAMP
+FROM DATAOPS_AGENT_DEMO.DEMO.CUSTOMER_SOURCE
+WHERE CUSTOMER_ID IS NOT NULL

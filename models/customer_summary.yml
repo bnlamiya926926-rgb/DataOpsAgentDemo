@@ -1,0 +1,15 @@
+
+version: 2
+
+models:
+  - name: customer_summary
+    description: "Demo customer summary model for DataOps incident investigation."
+    columns:
+      - name: CUSTOMER_ID
+        description: "Synthetic customer identifier."
+        data_tests:
+          - not_null
+          - unique
+      - name: REGION
+        data_tests:
+          - not_null
